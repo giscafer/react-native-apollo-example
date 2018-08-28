@@ -120,9 +120,9 @@ query {
 ```
 
 
-## Related
+## Related Article
 
-- [Angular-GraphQL-Express-Demo](https://github.com/giscafer/Angular-GraphQL-Express-Demo)
+- [How to use `create-react-native-app` with GraphQL & Apollo](https://www.prisma.io/blog/tutorial-using-create-react-native-app-with-graphql-apollo-e630aee3ae1e/)
 
 
 ## Issues
@@ -135,6 +135,12 @@ query {
 ![](./screenshot/2.jpg)
 
 ![](./screenshot/3.jpg)
+
+
+## Related Project
+
+- [Angular-GraphQL-Express-Demo](https://github.com/giscafer/Angular-GraphQL-Express-Demo)
+
 
 ## License
 

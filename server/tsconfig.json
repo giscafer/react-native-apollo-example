@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "declaration": true,
+    "lib": [
+      "esnext",
+      "esnext.asynciterable"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "graphql-advanced-projection": ["src/typings/graphql-advanced-projection"]
+    }
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

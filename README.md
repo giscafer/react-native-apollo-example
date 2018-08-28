@@ -4,10 +4,10 @@ A demo for study GraphQL & React Native
 
 ## Dependencies
 
-React Native
-Express
-Mongoose
-Apollo
+* React Native
+* Express
+* Mongoose
+* Apollo
 
 ## Install
 
@@ -15,6 +15,7 @@ Install npm modules.
 
 ```shell
 npm run app-install
+
 ```
 
 edit `.env` database info
@@ -51,7 +52,7 @@ test:
 
 ```bash
 
-### 查询用户
+### 查询文章
 query {
   posts{
     id
@@ -59,7 +60,7 @@ query {
   }
 }
 
-### 新增用户
+### 新增文章
 # mutation{
 #   createPost(description:"test"){
 #     id,
@@ -79,7 +80,7 @@ query {
 #   }
 # }
 
-### 更新用户
+### 更新文章
 # mutation{
 #   updatePost(id:"5b62b95e530ec2571455773b",description:"giscafer"){
 #     id,
@@ -123,6 +124,28 @@ query {
 
 - [Angular-GraphQL-Express-Demo](https://github.com/giscafer/Angular-GraphQL-Express-Demo)
 
+
+## Issues
+
+- [React Native 错误合集&解决方案](https://github.com/giscafer/front-end-manual/issues/19)
+
+
+## Screenshot
+
+![](./screenshot/2.jpg)
+
+![](./screenshot/3.jpg)
+
+## License
+
+MIT
+
+---
+
+> [giscafer.com](http://giscafer.com) &nbsp;&middot;&nbsp;
+> GitHub [@giscafer](https://github.com/giscafer) &nbsp;&middot;&nbsp;
+> Twitter [@nickbinglao](https://twitter.com/nickbinglao) &nbsp;&middot;&nbsp;
+> Weibo [@Nickbing_Lao](https://weibo.com/laohoubin)
 
 
 

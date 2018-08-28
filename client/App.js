@@ -5,12 +5,12 @@ import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-client-preset'
 import ListPage from './components/ListPage'
 
 // __SIMPLE_API_ENDPOINT__ looks like: 'https://1jzxrj179.lp.gql.zone/graphql'
-const httpLink = new HttpLink({ uri: 'http://localhost:3000/graphql' })
+const httpLink = new HttpLink({ uri: 'http://192.168.2.189:3000/graphql' })
 
 const client = new ApolloClient({
   link: httpLink,
   cache: new InMemoryCache()
-})
+});
 
 export default class App extends React.Component {
   render() {

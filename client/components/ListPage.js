@@ -4,10 +4,10 @@ import { graphql } from 'react-apollo';
 import { ListView, Modal, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 import CreatePage from './CreatePage';
 import Post from './Post';
-
-const allPostsQuery = gql`
+// posts(orderBy: createdAt_DESC) {
+const postsQuery = gql`
   query {
-    allPosts(orderBy: createdAt_DESC) {
+    posts {
       id
       imageUrl
       description
@@ -29,16 +29,16 @@ class ListPage extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (!nextProps.allPostsQuery.loading && !nextProps.allPostsQuery.error) {
+        if (!nextProps.postsQuery.loading && !nextProps.postsQuery.error) {
             const { dataSource } = this.state
             this.setState({
-                dataSource: dataSource.cloneWithRows(nextProps.allPostsQuery.allPosts),
+                dataSource: dataSource.cloneWithRows(nextProps.postsQuery.posts),
             })
         }
     }
 
     render() {
-        if (this.props.allPostsQuery.loading) {
+        if (this.props.postsQuery.loading) {
             return (<Text>Loading</Text>)
         }
 
@@ -52,7 +52,7 @@ class ListPage extends React.Component {
                 >
                     <CreatePage
                         onComplete={() => {
-                            this.props.allPostsQuery.refetch()
+                            this.props.postsQuery.refetch()
                             this.setState({ modalVisible: false })
                         }} />
                 </Modal>
@@ -104,4 +104,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default graphql(allPostsQuery, { name: 'allPostsQuery' })(ListPage)
+export default graphql(postsQuery, { name: 'postsQuery' })(ListPage)
